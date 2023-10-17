@@ -2,9 +2,15 @@ from keras.models import model_from_json
 from IPython.display import Image
 from tensorflow.keras.preprocessing import image
 
+import streamlit as st
+
+file = st.file_uploader(label="Загрузите изображение")
+img_path = file
+st.image(img_path)
+
 print("Загружаю сеть из файлов")
 # Загружаем данные об архитектуре сети
-json_file = open("CAT_and_DOG.json", "r")
+json_file = open("/mount/src/neiron_lab/neiron/image_lab/CAT_and_DOG.json", "r")
 loaded_model_json = json_file.read()
 json_file.close()
 # Создаем модель
@@ -15,7 +21,6 @@ print("Загрузка сети завершена")
 
 loaded_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
-img_path = 'cat.510.jpg'
 
 # Преобразуем картинку в вектор , массив numpy
 Image(img_path, width=150, height=150)
