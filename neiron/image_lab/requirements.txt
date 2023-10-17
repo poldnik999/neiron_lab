@@ -1,0 +1,4 @@
+cvlib
+matplotlib
+opencv-python-headless
+tensorflow
