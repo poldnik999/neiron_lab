@@ -1,4 +1,3 @@
-cvlib
-matplotlib
-opencv-python-headless
+model_from_json
+Image
 tensorflow
