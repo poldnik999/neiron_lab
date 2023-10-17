@@ -16,7 +16,7 @@ json_file.close()
 # Создаем модель
 loaded_model = model_from_json(loaded_model_json)
 # Загружаем сохраненные веса в модель
-loaded_model.load_weights("CAT_and_DOG.h5")
+loaded_model.load_weights("/mount/src/neiron_lab/neiron/image_lab/CAT_and_DOG.h5")
 #print("Загрузка сети завершена")
 
 loaded_model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
